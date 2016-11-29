@@ -43,7 +43,9 @@
     "postcss-loader": "1.1.1",
     "promise": "7.1.1",
     "react-dev-utils": "^0.3.0",
+    "react-redux": "^4.4.6",
     "recursive-readdir": "2.1.0",
+    "redux-devtools": "^3.3.1",
     "rimraf": "2.5.4",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
@@ -55,12 +57,13 @@
   },
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-router": "^3.0.0"
+    "react-redux": "^4.4.6",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
