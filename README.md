@@ -1,2 +1,9 @@
-# cra-bp
-modified create-react-app with mocha, chai, node, express
+# Create-react-app boilerplate
+
+Modified **create-react-app** with following packages:
+
+- mocha
+- chai
+- immutable (optional now with *redux*)
+- redux (TODO: create basic implementation)
+- react-router (basic routing)
