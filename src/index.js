@@ -5,14 +5,18 @@ import { render } from 'react-dom'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 
-import rootReducer from './reducers/reducers'
+import base from './widgets'
 import Routes from './Routes'
 import './index.css'
 
-// TODO: babel-polyfill, redux-thunk, redux-logger
+// TODO: babel-polyfill
 injectTapEventPlugin()
 
 const loggerMiddleware = createLogger()
+const rootReducer = combineReducers({
+  // add reducers here
+  base,
+})
 
 const store = createStore(rootReducer,
   {
