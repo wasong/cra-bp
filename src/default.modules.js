@@ -1,12 +1,11 @@
 /*
-  Rules for DUCK redux modularity
+  Rules for modified DUCK redux modularity
   - MUST export default a function called reducer()
   - MUST export its action creators as functions
-  - MUST have action types in the form npm-module-or-app/reducer/ACTION_TYPE
 */
 
 // actions
-const DEFAULT = 'src/DEFAULT'
+const DEFAULT = 'DEFAULT'
 
 // helper function to create reducers
 const createReducer = (initState, handlers) => {

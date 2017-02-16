@@ -5,11 +5,10 @@ import { render } from 'react-dom'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 
-import base from './widgets'
+import base from './default.modules'
 import Routes from './Routes'
 import './index.css'
 
-// TODO: babel-polyfill
 injectTapEventPlugin()
 
 const loggerMiddleware = createLogger()
