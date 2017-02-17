@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import logo from '../../logo.svg'
 import './App.css'
 
@@ -11,7 +11,25 @@ const App = props => (
     <p className="App-intro">
       To get started, edit <code>src/App.js</code> and save to reload.
     </p>
-    <button className="btn" onClick={props.loadDefault}>Redux!</button>
+    <p><button className="btn" onClick={props.loadDefault}>Console log Redux!</button></p>
+    <div>
+      Display Graphql query:&nbsp;
+      {
+        props.data.loading || props.data.error
+        ? <span>Loading...</span>
+        : (
+          <div>
+            <div>Trainer name: { props.data.Trainer.name }</div>
+            <div>Owned Pokemon: { props.data.Trainer.ownedPokemons.map(pokemon => (
+              <div key={pokemon.id}>
+                <div>{pokemon.name}</div>
+                <img src={pokemon.url} alt="" />
+              </div>
+            )) }</div>
+          </div>
+        )
+      }
+    </div>
   </div>
 )
 

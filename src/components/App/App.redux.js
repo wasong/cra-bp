@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import App from './App'
-
 import { loadDefault } from '../../default.modules'
 
 const mapStateToProps = (state) => {

@@ -9,3 +9,6 @@ Modified **create-react-app** with following changes:
 - immutable
 - redux
 - react-router
+- graphql w/ apollo-client
+  - uses example pokedex graphql db
+  - [Link to guide](http://dev.apollodata.com/react/index.html)
