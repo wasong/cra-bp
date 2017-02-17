@@ -4,6 +4,9 @@ import gql from 'graphql-tag'
 
 import App from './App.redux'
 
+// NOTE: only set this up if component needs data immediately
+//       otherwise, use the query function from utils/query
+
 // *********** BASIC **************
 // query with gql
 // must be signed up with the graphql db to have your name in there
