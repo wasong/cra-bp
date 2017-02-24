@@ -6,7 +6,7 @@ import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 
 import base from './default.modules'
-import Routes from './Routes'
+import Entry from './entry'
 import './index.css'
 
 injectTapEventPlugin()
@@ -28,6 +28,6 @@ const store = createStore(rootReducer,
 )
 
 render(
-  <Routes store={store} />,
+  <Entry store={store} />,
   document.getElementById('root'),
 )
