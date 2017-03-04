@@ -13,12 +13,12 @@ const App = props => (
     <p className="App-intro">
       To get started, edit <code>src/App.js</code> and save to reload.
     </p>
-    <p>
+    <div>
       <RaisedButton label="Console log Redux!" onClick={props.loadDefault} />
-    </p>
-    <p>
+    </div>
+    <div>
       <RaisedButton label="Material UI" />
-    </p>
+    </div>
     <div>
       Display Graphql query:&nbsp;
       {
