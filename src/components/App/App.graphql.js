@@ -24,26 +24,38 @@ import App from './App.redux'
 
 // *********** ADVANCED **************
 // nested-variable based queries
-const varQuery = gql`
-  query ($name: String!) {
-    Trainer(name: $name) {
+// const varQuery = gql`
+//   query ($name: String!) {
+//     Trainer(name: $name) {
+//       id
+//       name
+//       ownedPokemons {
+//         id
+//         name
+//         url
+//       }
+//     }
+//   }
+// `
+// // connection with options
+// const AppWithData = graphql(varQuery, {
+//   options: {
+//     variables: {
+//       name: 'Andrew',
+//     },
+//   },
+// })(App)
+
+const graphqlQuery = gql`
+  query {
+    allKappachinoes {
       id
-      name
-      ownedPokemons {
-        id
-        name
-        url
-      }
+      createdAt
+      posts
     }
   }
 `
-// connection with options
-const AppWithData = graphql(varQuery, {
-  options: {
-    variables: {
-      name: 'Andrew',
-    },
-  },
-})(App)
+
+const AppWithData = graphql(graphqlQuery)(App)
 
 export default AppWithData

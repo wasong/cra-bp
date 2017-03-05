@@ -26,13 +26,11 @@ const App = props => (
         ? <span>Loading...</span>
         : (
           <div>
-            <div>Trainer name: { props.data.Trainer.name }</div>
-            <div>Owned Pokemon: { props.data.Trainer.ownedPokemons.map(pokemon => (
-              <div key={pokemon.id}>
-                <div>{pokemon.name}</div>
-                <img src={pokemon.url} alt="" />
-              </div>
-            )) }</div>
+            {
+              props.data.allKappachinoes.map(user => (
+                <div key={user.id}>{user.posts}</div>
+              ))
+            }
           </div>
         )
       }
