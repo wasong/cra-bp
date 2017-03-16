@@ -80,6 +80,7 @@ function setupCompiler(host, port, protocol) {
     if (messages.warnings.length) {
       console.log(chalk.yellow('Compiled with warnings.'));
       console.log();
+      console.log('Warnings suppressed.');
       // messages.warnings.forEach(message => {
       //   console.log(message);
       //   console.log();

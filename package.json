@@ -58,10 +58,12 @@
   },
   "dependencies": {
     "apollo-client": "^0.8.6",
+    "auth0-lock": "^10.12.2",
     "body-parser": "^1.16.1",
     "graphql-tag": "^1.2.4",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
+    "jwt-decode": "^2.1.0",
     "material-ui": "^0.17.0",
     "react": "^15.4.2",
     "react-apollo": "^0.10.1",

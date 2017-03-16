@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import RaisedButton from 'material-ui/RaisedButton'
 
 import logo from '../../logo.svg'
@@ -13,12 +14,9 @@ const App = props => (
     <p className="App-intro">
       To get started, edit <code>src/App.js</code> and save to reload.
     </p>
-    <div>
-      <RaisedButton label="Console log Redux!" onClick={props.loadDefault} />
-    </div>
-    <div>
-      <RaisedButton label="Material UI" />
-    </div>
+    <div><RaisedButton label="Console log Redux!" onClick={props.loadDefault} /></div>
+    <div><RaisedButton label="Material UI" /></div>
+    <p><Link to="/auth">Auth</Link></p>
     <div>
       Display Graphql query:&nbsp;
       {

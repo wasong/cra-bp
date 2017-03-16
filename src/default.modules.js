@@ -20,7 +20,6 @@ const createReducer = (initState, handlers) => {
 // reducer
 const reducer = createReducer({}, {
   [DEFAULT](state, action) {
-    console.log('Called reducer!')
     return state
   },
 })
