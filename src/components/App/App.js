@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import RaisedButton from 'material-ui/RaisedButton'
 import gql from 'graphql-tag'
+import debounce from 'lodash.debounce'
 
 import { query } from '../../utils/query'
 import logo from '../../logo.svg'
@@ -24,6 +25,8 @@ const onClickQuery = async () => {
   console.log(p)
 }
 
+const debouncedQuery = debounce(onClickQuery, 250)
+
 const App = props => (
   <div className="App">
     <div className="App-header">
@@ -35,7 +38,7 @@ const App = props => (
     </p>
     <div><RaisedButton label="Console log Redux!" onClick={props.loadDefault} /></div>
     <div><RaisedButton label="Material UI" /></div>
-    <div><RaisedButton label="onClick Query" onClick={onClickQuery} /></div>
+    <div><RaisedButton label="onClick Query" onClick={debouncedQuery} /></div>
     <p><Link to="/auth">Auth</Link></p>
     <div>
       Display Graphql query:&nbsp;
