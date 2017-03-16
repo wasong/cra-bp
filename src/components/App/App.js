@@ -1,9 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router'
 import RaisedButton from 'material-ui/RaisedButton'
+import gql from 'graphql-tag'
 
+import { query } from '../../utils/query'
 import logo from '../../logo.svg'
 import './App.css'
+
+const onClickQuery = async () => {
+  const options = {
+    query: gql`
+      query {
+        allKappachinoes {
+          id
+          createdAt
+          posts
+        }
+      }
+    `,
+  }
+
+  const p = await query(options)
+  console.log(p)
+}
 
 const App = props => (
   <div className="App">
@@ -16,6 +35,7 @@ const App = props => (
     </p>
     <div><RaisedButton label="Console log Redux!" onClick={props.loadDefault} /></div>
     <div><RaisedButton label="Material UI" /></div>
+    <div><RaisedButton label="onClick Query" onClick={onClickQuery} /></div>
     <p><Link to="/auth">Auth</Link></p>
     <div>
       Display Graphql query:&nbsp;
