@@ -10,6 +10,5 @@ Modified **create-react-app** with following changes:
 - redux
 - react-router
 - graphql w/ apollo-client
-  - uses example pokedex graphql db
-  - [Link to guide](http://dev.apollodata.com/react/index.html)
 - material-ui
+- basic Auth0 authentication and authorized routes
