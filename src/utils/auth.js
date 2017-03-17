@@ -2,13 +2,14 @@ import Auth0Lock from 'auth0-lock'
 import { browserHistory } from 'react-router'
 
 import { isTokenExpired } from './jwtHelper'
+import { redirectUrl } from '../../config/auth'
 
 export default class AuthService {
   constructor(clientId, domain) {
     // Configure Auth0
     this.lock = new Auth0Lock(clientId, domain, {
       auth: {
-        redirectUrl: 'http://localhost:3000/login',
+        redirectUrl,
         responseType: 'token',
       },
     })
