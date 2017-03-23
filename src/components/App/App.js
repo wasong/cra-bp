@@ -5,9 +5,11 @@ import gql from 'graphql-tag'
 import debounce from 'lodash.debounce'
 
 import { query } from '../../utils/query'
-import logo from '../../logo.svg'
-import './App.css'
 
+/**
+ * Graphql query to invoke on click
+ * @return [Promise] loading and data response
+ */
 const onClickQuery = async () => {
   const options = {
     query: gql`
@@ -25,17 +27,15 @@ const onClickQuery = async () => {
   console.log(p)
 }
 
+/**
+ * Debounce multiple queries into one
+ * @type {Function} Executes onClickQuery function after 250seconds of waiting if no
+ * further invokations
+ */
 const debouncedQuery = debounce(onClickQuery, 250)
 
 const App = props => (
   <div className="App">
-    <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React</h2>
-    </div>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
     <div><RaisedButton label="Console log Redux!" onClick={props.loadDefault} /></div>
     <div><RaisedButton label="Material UI" /></div>
     <div><RaisedButton label="onClick Query" onClick={debouncedQuery} /></div>
